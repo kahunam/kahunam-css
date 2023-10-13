@@ -9,6 +9,12 @@
 8. Min-width.
 */
 
+/* Variables */
+
+:root {
+  --mobile-breakpoint-width: 749px;
+}
+
 /* Typography */
 
 /* Hero Headline */
@@ -20,6 +26,9 @@
 .f-subtitle {
   font-size: 3rem;
 }
+
+/* Text align */
+
 
 /* Box shadows */
 
@@ -69,6 +78,16 @@
 .ttc {       text-transform: capitalize; }
 .ttu {       text-transform: uppercase; }
 
+/* Text align */
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+
+/* Text align - mobile */
+.m-left { text-align: left; }
+.m-center { text-align: center; }
+.m-right { text-align: right; }
+
 /* Positioning */
 .static { position: static; }
 .relative  { position: relative; }
@@ -116,13 +135,39 @@
 
 /* Grids & Flexbox */
 
-/ grid 3 col equal - collapse on mobile
-/ grid 4 col equal - collapse on mobile
+.grid {
+  display: grid;
+}
+.g-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+}
+.g-3-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+}
+.g-4-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+}
+.g-5-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+}
+
 / grid 5 col equal - collapse on mobile
 
-Grid gap 1rem
-Grid gap 2rem
-Grid gap 3rem
+/* Gap */
+
+.gap-1 {
+gap: 1rem;
+}
+.gap-2 {
+gap: 2rem;
+}
+.gap-3 {
+gap: 3rem;
+}
 
 /* Padding and margins */
 .kh-p-1 {
@@ -151,3 +196,103 @@ Grid gap 3rem
 .measure-wide {   max-width: 34em; }
 .measure {        max-width: 30em; }
 .measure-narrow { max-width: 20em; }
+
+
+/* Position utilities */
+
+  /* Desktop alignment Utilities - Move to main theme code later. Mobile version below. */
+
+  .top-left {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .top-center {
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .top-right {
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  .middle-left {
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .middle-center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .middle-right {
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .bottom-left {
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  .bottom-center {
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .bottom-right {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: var(--breakpoint-width)) { 
+  /* Mobile Alignment Options */
+
+  .mobile-top-left {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .mobile-top-center {
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .mobile-top-right {
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  .mobile-middle-left {
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .mobile-middle-center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-middle-right {
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .mobile-bottom-left {
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  .mobile-bottom-center {
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .mobile-bottom-right {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+}
