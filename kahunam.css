@@ -15,24 +15,9 @@ CSS Utilities - For rapid development on sites that already have their own CSS
   --ka-large-padding: 30px;
 }
 
-/* Typography */
-
-/* Hero Headline */
-.ka-f-headline {
-  font-size: 6rem;
-}
-
-/* Hero Subtitle */
-.ka-f-subtitle {
-  font-size: 3rem;
-}
-
 /* Box shadows */
-
 /* Hover box shadows */
-
 /* Text colour utilities */
-
 /* Link colour utilities */
 
 a.ka-white-link { color:#fff; }
@@ -48,30 +33,6 @@ a:hover.ka-white-link { color:#fff; }
 /* Button min-width utilities */
 
 /* Button hover effects */
-
-/* Type Scale */
-
-.ka-f1 { font-size: 3rem; }
-.ka-f2 { font-size: 2.ka-25rem; }
-.ka-f3 { font-size: 1.ka-5rem; }
-.ka-f4 { font-size: 1.ka-25rem; }
-.ka-f5 { font-size: 1rem; }
-.ka-f6 { font-size: .ka-875rem; }
-.ka-f7 { font-size: .ka-75rem; } /* Small and hard to read for many people so use with extreme caution */
-
-@media (--ka-breakpoint-mobile){
-  .ka-f-6-ns,
-  .ka-f-headline-ns { font-size: 6rem; }
-  .ka-f-5-ns,
-  .ka-f-subheadline-ns { font-size: 5rem; }
-  .ka-f1-ns { font-size: 3rem; }
-  .ka-f2-ns { font-size: 2.ka-25rem; }
-  .ka-f3-ns { font-size: 1.ka-5rem; }
-  .ka-f4-ns { font-size: 1.ka-25rem; }
-  .ka-f5-ns { font-size: 1rem; }
-  .ka-f6-ns { font-size: .ka-875rem; }
-  .ka-f7-ns { font-size: .ka-75rem; }
-}
 
 /* Text utilities */
 .ka-i {         font-style: italic; }
@@ -120,7 +81,6 @@ a:hover.ka-white-link { color:#fff; }
 .ka-cover { object-fit: cover; }
 
 /* Aspect ratios */
-
 
 /** Heights **/
 
@@ -206,9 +166,9 @@ a:hover.ka-white-link { color:#fff; }
 
 /* Border Radius */
 .ka-br0 {        border-radius: 0; }
-.ka-br1 {        border-radius: .ka-125rem; }
-.ka-br2 {        border-radius: .ka-25rem; }
-.ka-br3 {        border-radius: .ka-5rem; }
+.ka-br1 {        border-radius: .125rem; }
+.ka-br2 {        border-radius: .25rem; }
+.ka-br3 {        border-radius: .5rem; }
 .ka-br4 {        border-radius: 1rem; }
 .ka-br-100 {     border-radius: 100%; }
 .ka-br-pill {    border-radius: 9999px; }
