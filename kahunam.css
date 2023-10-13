@@ -6,6 +6,7 @@ CSS Utilities - For rapid development on sites that already have their own CSS
 
 /* Breakpoints */
 :root {
+  --ka-tablet-breakpoint-width: 1049px;
   --ka-mobile-breakpoint-width: 749px;
 }
 /* Padding */
