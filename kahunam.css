@@ -228,6 +228,17 @@ gap: 3rem;
 
 /* Padding and margins */
 
+.p-small { padding: (--small-padding); }
+.p-medium { padding: (--medium-padding); }
+.p-large { padding: (--large-padding); }
+
+.pt0 { padding-top:0px }
+.pb0 { padding-bottom:0px }
+
+/* Margins */
+
+.mx-auto { margin: 0 auto; }
+
 /* Borders */
 .b1 {
   border-width: 1px;
