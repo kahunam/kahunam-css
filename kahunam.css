@@ -56,8 +56,6 @@ a:hover.white-link { color:#fff; }
 
 /* Button hover effects */
 
-
-
 /* Type Scale */
 
 .f1 { font-size: 3rem; }
@@ -202,19 +200,12 @@ a:hover.white-link { color:#fff; }
 .pb0 { padding-bottom:0px }
 
 /* Margins */
-
 .mx-auto { margin: 0 auto; }
 
 /* Borders */
-.b1 {
-  border-width: 1px;
-}
-.b2 {
-  border-width: 2px;
-}
-.b3 {
-  border-width: 3px;
-}
+.b1 { border-width: 1px; }
+.b2 { border-width: 2px; }
+.b3 { border-width: 3px; }
 
 /* Border Radius */
 .br0 {        border-radius: 0; }
@@ -229,9 +220,6 @@ a:hover.white-link { color:#fff; }
 .measure-wide {   max-width: 34em; }
 .measure {        max-width: 30em; }
 .measure-narrow { max-width: 20em; }
-
-
-/* Position utilities */
 
 /* Alignment Utilities */
 
