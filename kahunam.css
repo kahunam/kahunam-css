@@ -24,9 +24,7 @@ a.ka-white-link { color:#fff; }
 a:hover.ka-white-link { color:#fff; }
 
 .ka-a-current-color a,
-.ka-a-hover-current-color a:hover,
- color: currentColor;
-}
+.ka-a-hover-current-color a:hover { color: currentColor; }
 
 /* Button paddding utilities */
 
