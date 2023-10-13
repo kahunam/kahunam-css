@@ -1,0 +1,153 @@
+/*
+1. Variables: breakpoints.
+2. Text utilities
+3. Positioning.
+4. Grids & Flexbox.
+5. Padding and margins.
+6. Borders
+7. Max-width.
+8. Min-width.
+*/
+
+/* Typography */
+
+/* Hero Headline */
+.f-headline {
+  font-size: 6rem;
+}
+
+/* Hero Subtitle */
+.f-subtitle {
+  font-size: 3rem;
+}
+
+/* Box shadows */
+
+/* Hover box shadows */
+
+/* Text colour utilities */
+
+/* Link colour utilities */
+
+/* Button paddding utilities */
+
+/* Button min-width utilities */
+
+/* Button hover effects */
+
+
+
+/* Type Scale */
+
+.f1 { font-size: 3rem; }
+.f2 { font-size: 2.25rem; }
+.f3 { font-size: 1.5rem; }
+.f4 { font-size: 1.25rem; }
+.f5 { font-size: 1rem; }
+.f6 { font-size: .875rem; }
+.f7 { font-size: .75rem; } /* Small and hard to read for many people so use with extreme caution */
+
+@media (--breakpoint-mobile){
+  .f-6-ns,
+  .f-headline-ns { font-size: 6rem; }
+  .f-5-ns,
+  .f-subheadline-ns { font-size: 5rem; }
+  .f1-ns { font-size: 3rem; }
+  .f2-ns { font-size: 2.25rem; }
+  .f3-ns { font-size: 1.5rem; }
+  .f4-ns { font-size: 1.25rem; }
+  .f5-ns { font-size: 1rem; }
+  .f6-ns { font-size: .875rem; }
+  .f7-ns { font-size: .75rem; }
+}
+
+/* Text utilities */
+.i {         font-style: italic; }
+.b {         font-weight: bold; }
+.underline { text-decoration: underline; }
+.strike {    text-decoration: line-through; }
+.ttc {       text-transform: capitalize; }
+.ttu {       text-transform: uppercase; }
+
+/* Positioning */
+.static { position: static; }
+.relative  { position: relative; }
+.absolute  { position: absolute; }
+.fixed  { position: fixed; }
+
+@media (--breakpoint-mobile){
+  .static-ns { position: static; }
+  .relative-ns  { position: relative; }
+  .absolute-ns  { position: absolute; }
+  .fixed-ns  { position: fixed; }
+}
+
+/* Heights */
+
+/* Height Percentages - Based off of height of parent */
+
+.h-25 {  height:  25%; }
+.h-50 {  height:  50%; }
+.h-75 {  height:  75%; }
+.h-100 { height: 100%; }
+
+/* Screen Height Percentage */
+
+.vh-25 {  height:  25vh; }
+.vh-50 {  height:  50vh; }
+.vh-75 {  height:  75vh; }
+.vh-100 { height: 100vh; }
+
+/* Min-height Percentages */
+
+.min-h-25 {  min-height:  25%; }
+.min-h-50 {  min-height:  50%; }
+.min-h-75 {  min-height:  75%; }
+.min-h-100 { min-height: 100%; }
+
+/* Screen Min-height Percentage */
+
+.vh-25 {  min-height:  25vh; }
+.vh-50 {  min-height:  50vh; }
+.vh-75 {  min-height:  75vh; }
+.vh-100 { min-height: 100vh; }
+
+.min-vh-100 { min-height: 100vh; }
+
+/* Grids & Flexbox */
+
+/ grid 3 col equal - collapse on mobile
+/ grid 4 col equal - collapse on mobile
+/ grid 5 col equal - collapse on mobile
+
+Grid gap 1rem
+Grid gap 2rem
+Grid gap 3rem
+
+/* Padding and margins */
+.kh-p-1 {
+  padding: 0.25rem;
+}
+
+.kh-m-1 {
+  margin: 0.25rem;
+}
+
+/* Borders */
+.kh-border {
+  border: 1px solid #000;
+}
+
+/* Border Radius */
+.br0 {        border-radius: 0; }
+.br1 {        border-radius: .125rem; }
+.br2 {        border-radius: .25rem; }
+.br3 {        border-radius: .5rem; }
+.br4 {        border-radius: 1rem; }
+.br-100 {     border-radius: 100%; }
+.br-pill {    border-radius: 9999px; }
+
+/* Max-width */
+.measure-wide {   max-width: 34em; }
+.measure {        max-width: 30em; }
+.measure-narrow { max-width: 20em; }
