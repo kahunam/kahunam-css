@@ -9,10 +9,17 @@
 8. Min-width.
 */
 
-/* Variables */
+/** Variables **/
 
+/* Breakpoints */
 :root {
   --mobile-breakpoint-width: 749px;
+}
+/* Padding */
+:root {
+  --small-padding: 10px;
+  --medium-padding: 20px;
+  --large-padding: 30px;
 }
 
 /* Typography */
@@ -27,9 +34,6 @@
   font-size: 3rem;
 }
 
-/* Text align */
-
-
 /* Box shadows */
 
 /* Hover box shadows */
@@ -37,6 +41,14 @@
 /* Text colour utilities */
 
 /* Link colour utilities */
+
+a.white-link { color:#fff; }
+a:hover.white-link { color:#fff; }
+
+.a-current-color a,
+.a-hover-current-color a:hover,
+ color: currentColor;
+}
 
 /* Button paddding utilities */
 
@@ -103,7 +115,23 @@
   .fixed-ns  { position: fixed; }
 }
 
-/* Heights */
+/* Full width */
+.w-100 { width:100%; }
+
+/* Images */
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+/* Object fit */  
+.contain { object-fit: contain; }
+.cover { object-fit: cover; }
+
+/* Aspect ratios */
+
+
+/** Heights **/
 
 /* Height Percentages - Based off of height of parent */
 
@@ -151,6 +179,16 @@
 }
 .g-5-equal-col {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+}
+
+/* Tablet collapse */
+@media (--breakpoint-mobile) {
+.g-2-equal-col-mobile {
+  grid-template-columns: 1fr 1fr; 
+}
+.g-3-equal-col-mobile {
+  grid-template-columns: 1fr 1fr 1fr; 
+}
 }
 
 /* Grid - Popular layouts */
