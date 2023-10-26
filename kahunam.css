@@ -39,7 +39,7 @@ a:hover.ka-white-link { color:#fff; }
 .ka-strike {    text-decoration: line-through; }
 .ka-ttc {       text-transform: capitalize; }
 .ka-ttu {       text-transform: uppercase; }
-.ka-tnone {       text-transform: uppercase; }
+.ka-tnone {       text-transform: none; }
 
 /* Text align */
 .ka-left { text-align: left; }
