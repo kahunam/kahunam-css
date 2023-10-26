@@ -3,10 +3,9 @@ CSS Utilities - For rapid development on sites that already have their own CSS
 */
 
 /** Variables **/
-
 /* Breakpoints */
 :root {
-  --ka-tablet-breakpoint-width: 1049px;
+  --ka-tablet-breakpoint-width: 1049px;  
   --ka-mobile-breakpoint-width: 749px;
 }
 /* Padding */
@@ -40,6 +39,7 @@ a:hover.ka-white-link { color:#fff; }
 .ka-strike {    text-decoration: line-through; }
 .ka-ttc {       text-transform: capitalize; }
 .ka-ttu {       text-transform: uppercase; }
+.ka-tnone {       text-transform: uppercase; }
 
 /* Text align */
 .ka-left { text-align: left; }
@@ -52,6 +52,10 @@ a:hover.ka-white-link { color:#fff; }
 .ka-m-center { text-align: center; }
 .ka-m-right { text-align: right; }
 }
+
+/* Display */
+.ka-inline-block { display: inline-block; }
+.ka-block  { position: block; }
 
 /* Positioning */
 .ka-static { position: static; }
@@ -140,44 +144,6 @@ a:hover.ka-white-link { color:#fff; }
 }
 }
 
-/* Flexbox */
-
-.ka-flex { display: flex; }
-.ka-flex-none { flex: none; }
-
-.ka-flex-column  { flex-direction: column; }
-.ka-flex-row     { flex-direction: row; }
-.ka-flex-wrap    { flex-wrap: wrap; }
-.ka-flex-nowrap    { flex-wrap: nowrap; }
-.ka-flex-wrap-reverse    { flex-wrap: wrap-reverse; }
-.ka-flex-column-reverse  { flex-direction: column-reverse; }
-.ka-flex-row-reverse     { flex-direction: row-reverse; }
-
-.ka-items-start    { align-items: flex-start; }
-.ka-items-end      { align-items: flex-end; }
-.ka-items-center   { align-items: center; }
-.ka-items-baseline { align-items: baseline; }
-.ka-items-stretch  { align-items: stretch; }
-
-.ka-self-start    { align-self: flex-start; }
-.ka-self-end      { align-self: flex-end; }
-.ka-self-center   { align-self: center; }
-.ka-self-baseline { align-self: baseline; }
-.ka-self-stretch  { align-self: stretch; }
-
-.ka-justify-start   { justify-content: flex-start; }
-.ka-justify-end     { justify-content: flex-end; }
-.ka-justify-center  { justify-content: center; }
-.ka-justify-between { justify-content: space-between; }
-.ka-justify-around  { justify-content: space-around; }
-
-.ka-content-start   { align-content: flex-start; }
-.ka-content-end     { align-content: flex-end; }
-.ka-content-center  { align-content: center; }
-.ka-content-between { align-content: space-between; }
-.ka-content-around  { align-content: space-around; }
-.ka-content-stretch { align-content: stretch; }
-
 /* Gap */
 
 .ka-gap-1 { gap: 1rem; }
@@ -185,7 +151,6 @@ a:hover.ka-white-link { color:#fff; }
 .ka-gap-3 { gap: 3rem; }
 
 /* Padding and margins */
-
 .ka-p-small { padding: (--ka-small-padding); }
 .ka-p-medium { padding: (--ka-medium-padding); }
 .ka-p-large { padding: (--ka-large-padding); }
@@ -195,6 +160,13 @@ a:hover.ka-white-link { color:#fff; }
 
 /* Margins */
 .ka-mx-auto { margin: 0 auto; }
+
+/* Button padding */
+
+.ka-btn-p-small { padding: 8px 16px; }
+.ka-btn-p-medium { padding: 11px 20px; }
+.ka-btn-p-large { padding: 16px 26px; }
+.ka-btn-p-hero { padding: 30px 50px; }
 
 /* Borders */
 .ka-b1 { border-width: 1px; }
