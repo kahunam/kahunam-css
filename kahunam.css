@@ -190,9 +190,9 @@ a:hover.ka-white-link { color:#fff; }
 .ka-gap-3 { gap: 3rem; }
 
 /* Padding and margins */
-.ka-p-small { padding: (--ka-small-padding); }
-.ka-p-medium { padding: (--ka-medium-padding); }
-.ka-p-large { padding: (--ka-large-padding); }
+.ka-p-small { padding: var(--ka-small-padding); }
+.ka-p-medium { padding: var(--ka-medium-padding); }
+.ka-p-large { padding: var(--ka-large-padding); }
 
 .ka-pt0 { padding-top:0px }
 .ka-pb0 { padding-bottom:0px }
