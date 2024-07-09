@@ -3,17 +3,39 @@ CSS Utilities - For rapid development on sites that already have their own CSS
 */
 
 /** Variables **/
-/* Breakpoints */
-:root {
-  --ka-tablet-breakpoint-width: 1049px;  
-  --ka-mobile-breakpoint-width: 749px;
-}
+/* Breakpoints note
+Tablet - 1049px
+Mobile - 749px
+*/
+
 /* Padding */
 :root {
   --ka-small-padding: 10px;
   --ka-medium-padding: 20px;
   --ka-large-padding: 30px;
 }
+
+/* Mobile display styles */
+
+
+@media screen and (min-width: 1050px) {
+.ka-hide-desktop {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1049px) {
+.ka-hide-tablet {
+  display: none !important;
+}
+}
+
+@media screen and (max-width: 749px) {
+.ka-hide-mobile {
+display: none !important;
+}
+}
+
 
 /* Box shadows */
 /* Hover box shadows */
@@ -28,9 +50,14 @@ a:hover.ka-white-link { color:#fff; }
 
 /* Button paddding utilities */
 
-/* Button min-width utilities */
-
 /* Button hover effects */
+
+/* Text sizes */
+
+.ka-t-xs { font-size: 14px; }
+.ka-t-normal { font-size: 16px; }
+.ka-t-medium { font-size: 22px; }
+.ka-t-large { font-size: 28px; }
 
 /* Text utilities */
 .ka-i {         font-style: italic; }
@@ -46,7 +73,7 @@ a:hover.ka-white-link { color:#fff; }
 .ka-center { text-align: center; }
 .ka-right { text-align: right; }
 
-@media (--ka-breakpoint-mobile) {
+@media screen and (max-width: 749px) {
 /* Text align - mobile */
 .ka-m-left { text-align: left; }
 .ka-m-center { text-align: center; }
@@ -55,7 +82,18 @@ a:hover.ka-white-link { color:#fff; }
 
 /* Display */
 .ka-inline-block { display: inline-block; }
-.ka-block  { position: block; }
+.ka-flex { display: flex; }
+.ka-block  { display: block; }
+
+/* Flexbox */
+
+.ka-flex-column  { flex-direction: column; }
+.ka-flex-row     { flex-direction: row; }
+.ka-flex-wrap    { flex-wrap: wrap; }
+.ka-flex-nowrap    { flex-wrap: nowrap; }
+.ka-flex-wrap-reverse    { flex-wrap: wrap-reverse; }
+.ka-flex-column-reverse  { flex-direction: column-reverse; }
+.ka-flex-row-reverse     { flex-direction: row-reverse; }
 
 /* Positioning */
 .ka-static { position: static; }
@@ -63,7 +101,7 @@ a:hover.ka-white-link { color:#fff; }
 .ka-absolute  { position: absolute; }
 .ka-fixed  { position: fixed; }
 
-@media (--ka-breakpoint-mobile) {
+@media screen and (max-width: 749px) {
   .ka-static-ns { position: static; }
   .ka-relative-ns  { position: relative; }
   .ka-absolute-ns  { position: absolute; }
@@ -84,6 +122,10 @@ a:hover.ka-white-link { color:#fff; }
 .ka-cover { object-fit: cover; }
 
 /* Aspect ratios */
+
+.ka-aspect-1-1 {
+  aspect-ratio: 1 / 1;
+}
 
 /** Heights **/
 
@@ -119,69 +161,39 @@ a:hover.ka-white-link { color:#fff; }
 
 /* CSS Grid  */
 .ka-grid { display: grid; }
+.ka-grid-equal-col { grid-auto-flow: column;
+  grid-auto-columns: 1fr;}
 .ka-g-2-equal-col { grid-template-columns: 1fr 1fr; }
 .ka-g-3-equal-col { grid-template-columns: 1fr 1fr 1fr; }
 .ka-g-4-equal-col { grid-template-columns: 1fr 1fr 1fr 1fr; }
 .ka-g-5-equal-col { grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
-
-/* Tablet collapse */
-@media (--ka-breakpoint-mobile) {
-.ka-g-2-equal-col-mobile { grid-template-columns: 1fr 1fr; }
-.ka-g-3-equal-col-mobile { grid-template-columns: 1fr 1fr 1fr; }
-}
+.ka-g-6-equal-col { grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
 
 /* Grid - Popular layouts */
 .ka-g-2-3 { grid-template-columns: 2fr 3fr; }
 .ka-g-3-2 { grid-template-columns: 3fr 2fr; }
 .ka-g-3-1 { grid-template-columns: 3fr 1fr; }
 .ka-g-1-3 { grid-template-columns: 1fr 3fr; }
+.ka-g-1-4 { grid-template-columns: 1fr 4fr; }
+.ka-g-1-5 { grid-template-columns: 1fr 5fr; }
+.ka-g-1-6 { grid-template-columns: 1fr 6fr; }
+.ka-g-1-7 { grid-template-columns: 1fr 7fr; }
+.ka-g-1-8 { grid-template-columns: 1fr 8fr; }
+.ka-g-1-2 { grid-template-columns: 1fr 2fr; }
 
 /* Grid - Collapse on mobile */
 
-@media (--ka-breakpoint-mobile) {
+@media screen and (max-width:749px) {
 .ka-grid-mobile-collapse {
  grid-template-columns: 1fr; 
 }
+.ka-grid-mobile-collapse-2 {
+  grid-template-columns: 1fr 1fr; 
+ }
+ .ka-grid-mobile-collapse-3 {
+  grid-template-columns: 1fr 1fr 1fr; 
+ }
 }
-
-/* Flexbox */
-
-.ka-flex { display: flex; }
-.ka-flex-none { flex: none; }
-
-.ka-flex-column  { flex-direction: column; }
-.ka-flex-row     { flex-direction: row; }
-.ka-flex-wrap    { flex-wrap: wrap; }
-.ka-flex-nowrap    { flex-wrap: nowrap; }
-.ka-flex-wrap-reverse    { flex-wrap: wrap-reverse; }
-.ka-flex-column-reverse  { flex-direction: column-reverse; }
-.ka-flex-row-reverse     { flex-direction: row-reverse; }
-
-.ka-items-start    { align-items: flex-start; }
-.ka-items-end      { align-items: flex-end; }
-.ka-items-center   { align-items: center; }
-.ka-items-baseline { align-items: baseline; }
-.ka-items-stretch  { align-items: stretch; }
-
-.ka-self-start    { align-self: flex-start; }
-.ka-self-end      { align-self: flex-end; }
-.ka-self-center   { align-self: center; }
-.ka-self-baseline { align-self: baseline; }
-.ka-self-stretch  { align-self: stretch; }
-
-.ka-justify-start   { justify-content: flex-start; }
-.ka-justify-end     { justify-content: flex-end; }
-.ka-justify-center  { justify-content: center; }
-.ka-justify-between { justify-content: space-between; }
-.ka-justify-around  { justify-content: space-around; }
-
-.ka-content-start   { align-content: flex-start; }
-.ka-content-end     { align-content: flex-end; }
-.ka-content-center  { align-content: center; }
-.ka-content-between { align-content: space-between; }
-.ka-content-around  { align-content: space-around; }
-.ka-content-stretch { align-content: stretch; }
-
 
 /* Gap */
 
@@ -197,12 +209,27 @@ a:hover.ka-white-link { color:#fff; }
 .ka-pt0 { padding-top:0px }
 .ka-pb0 { padding-bottom:0px }
 
+.ka-p-0 { padding: 0;}
+
 /* Margins */
 .ka-mx-auto { margin: 0 auto; }
-.ka-m-0 { margin: 0; }
+.ka-m-0 { margin: 0;}
+
+.ka-m-medium { margin: var(--ka-medium-padding); }
+.ka-m-large { margin: var(--ka-large-padding); }
+
+
+/* Top margins */
+.ka-m-t-auto { margin-top: auto;}
+.ka-m-t-small { margin-top: 10px;}
+.ka-m-t-medium { margin-top: 20px;}
+.ka-m-t-large { margin-top: 40px;}
+/* Bottom margins */
+.ka-m-b-small { margin-bottom: 10px;}
+.ka-m-b-medium { margin-bottom: 20px;}
+.ka-m-b-large { margin-bottom: 40px;}
 
 /* Button padding */
-
 .ka-btn-p-small { padding: 8px 16px; }
 .ka-btn-p-medium { padding: 11px 20px; }
 .ka-btn-p-large { padding: 16px 26px; }
@@ -226,6 +253,19 @@ a:hover.ka-white-link { color:#fff; }
 .ka-measure-wide {   max-width: 34em; }
 .ka-measure {        max-width: 30em; }
 .ka-measure-narrow { max-width: 20em; }
+.ka-max-width-100 { max-width: 100%;}
+
+/* Positioning  */
+.ka-top-0 { top:0; }
+.ka-left-0 { left:0; }
+.ka-right-0 { right:0; }
+.ka-bottom-0 { bottom: 0; }
+
+/* Overflow */
+
+.ka-overflow-hidden {
+  overflow: hidden;
+}
 
 /* Alignment Utilities */
 
@@ -241,9 +281,13 @@ a:hover.ka-white-link { color:#fff; }
     align-items: flex-start;
     justify-content: flex-end;
   }
-  .ka-middle-left {
+  /* .ka-middle-left {
     align-items: center;
     justify-content: flex-start;
+  } */
+  .ka-middle-left {
+  align-items: start;
+    justify-content: center;
   }
   .ka-middle-center {
     align-items: center;
@@ -305,3 +349,15 @@ a:hover.ka-white-link { color:#fff; }
     justify-content: flex-end;
   }
 }
+
+/* List reset */
+
+.ka-reset-list { list-style: none; }
+
+/* Text colors */
+
+.ka-t-white { color: #fff;}
+
+/* Z index */
+.ka-zi-neg-1 { z-index: -1;}
+.ka-zi-1 { z-index: 1;}
